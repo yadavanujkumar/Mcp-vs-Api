@@ -89,7 +89,7 @@ MCP is valuable because it enables:
 
 ```mermaid
 flowchart LR
-    A[AI Agent Client] <-->|JSON-RPC 2.0 over stdio/SSE| B[Custom MCP Server]
+    A[AI Agent Client] <-->|JSON-RPC 2.0 over stdio| B[Custom MCP Server]
     B <-->|HTTPS REST| C[ERP/Logistics APIs]
 ```
 

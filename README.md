@@ -141,15 +141,14 @@ It gives an AI agent a constrained action surface while preserving API governanc
 
 ## Files
 
-- `/home/runner/work/Mcp-vs-Api/Mcp-vs-Api/legacy_api.py`
-- `/home/runner/work/Mcp-vs-Api/Mcp-vs-Api/supply_chain_mcp_server.py`
-- `/home/runner/work/Mcp-vs-Api/Mcp-vs-Api/agent_client.py`
-- `/home/runner/work/Mcp-vs-Api/Mcp-vs-Api/requirements.txt`
+- `legacy_api.py`
+- `supply_chain_mcp_server.py`
+- `agent_client.py`
+- `requirements.txt`
 
 ## Setup
 
 ```bash
-cd /home/runner/work/Mcp-vs-Api/Mcp-vs-Api
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -160,15 +159,22 @@ pip install -r requirements.txt
 Terminal 1:
 
 ```bash
-cd /home/runner/work/Mcp-vs-Api/Mcp-vs-Api
 uvicorn legacy_api:app --host 0.0.0.0 --port 8000
 ```
 
 Terminal 2:
 
 ```bash
-cd /home/runner/work/Mcp-vs-Api/Mcp-vs-Api
 python agent_client.py
+```
+
+
+## Validate
+
+Run the automated tests before changing the demo or using it as a baseline:
+
+```bash
+pytest
 ```
 
 The client spawns the MCP server (`supply_chain_mcp_server.py`) over stdio and executes:
